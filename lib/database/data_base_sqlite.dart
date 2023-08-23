@@ -5,9 +5,7 @@ class DataBaseSqlite {
   Future<Database> openConnection() async {
     final dataBasePath = await getDatabasesPath();
     final dataBaseFinalPath = join(dataBasePath, 'SQLITE_EXAMPLE');
-    print(dataBasePath);
-    print(dataBaseFinalPath);
-
+    
     return await openDatabase(
       dataBaseFinalPath,
       version: 2,
